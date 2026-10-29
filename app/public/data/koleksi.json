@@ -1,10 +1,83 @@
+
 [
   {
     "id": "1",
-    "judul": "Contoh item pertama",
-    "kategori": "Contoh",
-    "fieldTema1": "ganti sesuai field tema",
-    "fieldTema2": 0,
-    "fieldTema3": "ganti sesuai field tema"
+    "judul": "Warung Makan Bu Ilsha",
+    "kategori": "Nasi",
+    "alamat": "Way Hui, Jati Agung, Lampung Selatan",
+    "hargaRataRata": 15000,
+    "jamBuka": "10.00-23.00"
+  },
+  {
+    "id": "2",
+    "judul": "RM Taratak Jaya",
+    "kategori": "Nasi",
+    "alamat": "Jl. Airan Raya No.84, Way Hui, Jati Agung",
+    "hargaRataRata": 17000,
+    "jamBuka": "07.00-21.00"
+  },
+  {
+    "id": "3",
+    "judul": "Ayam Bakar Ojo Gelo 3",
+    "kategori": "Nasi",
+    "alamat": "Jl. Airan Raya No.9, Way Huwi, Jati Agung",
+    "hargaRataRata": 16000,
+    "jamBuka": "07.30-20.00"
+  },
+  {
+    "id": "4",
+    "judul": "Warung Makan MT Barokah",
+    "kategori": "Nasi",
+    "alamat": "Jl. Lapas Raya, Way Hui, Jati Agung",
+    "hargaRataRata": 14000,
+    "jamBuka": "08.00-21.00"
+  },
+  {
+    "id": "5",
+    "judul": "Kantin Sean",
+    "kategori": "Nasi",
+    "alamat": "Jl. Nangka III, Korpri Jaya, Sukarame",
+    "hargaRataRata": 13000,
+    "jamBuka": "10.00-22.00"
+  },
+  {
+    "id": "6",
+    "judul": "Mie Ayam Bakso 91",
+    "kategori": "Mi",
+    "alamat": "Jl. Ryacudu No.4, Harapan Jaya, Sukarame",
+    "hargaRataRata": 17000,
+    "jamBuka": "10.00-21.00"
+  },
+  {
+    "id": "7",
+    "judul": "Bingxue ITERA",
+    "kategori": "Minuman",
+    "alamat": "SPBU ITERA, Sabah Balau, Tanjung Bintang",
+    "hargaRataRata": 15000,
+    "jamBuka": "09.00-23.00"
+  },
+  {
+    "id": "8",
+    "judul": "Jelly Potter ITERA",
+    "kategori": "Minuman",
+    "alamat": "Jl. Lapas Raya, Way Hui, Jati Agung",
+    "hargaRataRata": 18000,
+    "jamBuka": "11.00-22.00"
+  },
+  {
+    "id": "9",
+    "judul": "Pempek 115",
+    "kategori": "Jajanan",
+    "alamat": "Jl. Ryacudu No.4, Korpri Raya, Sukarame",
+    "hargaRataRata": 10000,
+    "jamBuka": "08.00-22.00"
+  },
+  {
+    "id": "10",
+    "judul": "Dapur Archa",
+    "kategori": "Nasi",
+    "alamat": "Jl. Senopati Raya, Griya Way Huwi Blok B No.17",
+    "hargaRataRata": 14000,
+    "jamBuka": "09.00-22.00"
   }
 ]
