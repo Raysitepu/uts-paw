@@ -1,6 +1,4 @@
 # Ujian Tengah Semester IF25-22014 Pengembangan Aplikasi Web
-# Ujian Tengah Semester IF25-22014 Pengembangan Aplikasi Web
-
 Repo induk Ujian Tengah Semester Pengembangan Aplikasi Web, Informatika ITERA, semester ganjil 2026/2027.
 
 **Soal, contoh kode, panduan, rubrik, ketentuan, dan materi: https://uts-paw.mhabibalgifari.web.id**
