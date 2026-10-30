@@ -20,10 +20,10 @@ Aplikasi berbasis web untuk membantu mahasiswa dan masyarakat menemukan informas
 
 ## Tangkapan Layar
 ### Beranda
-![Halaman Beranda](docs/beranda.png)
+![Halaman Beranda](docs/beranda.png?v=2)
 
 ### Koleksi Kuliner
-![Halaman Koleksi Kuliner](docs/koleksi.png)
+![Halaman Koleksi](docs/koleksi.png?v=2)
 
 ### Tambah Kuliner
 ![Halaman Tambah Kuliner](docs/tambah.png)
