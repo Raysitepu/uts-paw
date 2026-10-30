@@ -3,6 +3,7 @@ import { useState } from 'react'
 import useKoleksi from '../hooks/useKoleksi.js'
 import KartuItem from '../components/KartuItem.jsx'
 import KotakPencarian from '../components/KotakPencarian.jsx'
+import './Koleksi.css'
 
 export default function Koleksi() {
   const { items, loading, error } = useKoleksi()
