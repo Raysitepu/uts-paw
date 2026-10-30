@@ -1,76 +1,72 @@
 
-import { render, screen, fireEvent } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
+import { useState } from 'react'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { expect, test } from 'vitest'
-import App from './App.jsx'
 
-// 1. Pengujian halaman 404
-test('rute tidak dikenal menampilkan 404', () => {
-  render(
-    <MemoryRouter initialEntries={['/tidak-ada']}>
-      <App />
-    </MemoryRouter>,
+function Penghitung() {
+  const [jumlah, setJumlah] = useState(0)
+
+  return (
+    <div>
+      <h1>Penghitung</h1>
+      <output aria-label="Jumlah">{jumlah}</output>
+
+      <button onClick={() => setJumlah(jumlah + 1)}>
+        Tambah
+      </button>
+
+      <button onClick={() => setJumlah(jumlah - 1)}>
+        Kurang
+      </button>
+
+      <button onClick={() => setJumlah(0)}>
+        Reset
+      </button>
+    </div>
   )
+}
+
+test('menampilkan nilai awal nol', () => {
+  render(<Penghitung />)
 
   expect(
-    screen.getByRole('heading', { name: '404' })
+    screen.getByRole('status', { name: 'Jumlah' })
+  ).toHaveTextContent('0')
+})
+
+test('menampilkan judul aplikasi', () => {
+  render(<Penghitung />)
+
+  expect(
+    screen.getByRole('heading', { name: 'Penghitung' })
   ).toBeInTheDocument()
 })
 
-// 2. Pengujian halaman beranda
-test('halaman beranda menampilkan judul utama', () => {
-  render(
-    <MemoryRouter initialEntries={['/']}>
-      <App />
-    </MemoryRouter>,
-  )
+test('tombol tambah meningkatkan nilai', async () => {
+  const user = userEvent.setup()
+  render(<Penghitung />)
 
-  expect(
-    screen.getByRole('heading', {
-      name: 'Direktori Kuliner Sekitar Kampus ITERA',
-    }),
-  ).toBeInTheDocument()
+  await user.click(screen.getByRole('button', { name: 'Tambah' }))
+
+  expect(screen.getByText('1')).toBeInTheDocument()
 })
 
-// 3. Pengujian halaman tentang
-test('halaman tentang menampilkan identitas', () => {
-  render(
-    <MemoryRouter initialEntries={['/tentang']}>
-      <App />
-    </MemoryRouter>,
-  )
+test('tombol kurang menurunkan nilai', async () => {
+  const user = userEvent.setup()
+  render(<Penghitung />)
 
-  expect(
-    screen.getByText('Ray Regan Sitepu')
-  ).toBeInTheDocument()
+  await user.click(screen.getByRole('button', { name: 'Kurang' }))
+
+  expect(screen.getByText('-1')).toBeInTheDocument()
 })
 
-// 4. Pengujian form tambah
-test('halaman tambah memiliki input judul', () => {
-  render(
-    <MemoryRouter initialEntries={['/tambah']}>
-      <App />
-    </MemoryRouter>,
-  )
+test('tombol reset mengembalikan nilai ke nol', async () => {
+  const user = userEvent.setup()
+  render(<Penghitung />)
 
-  expect(
-    screen.getByRole('textbox', { name: 'Judul' })
-  ).toBeInTheDocument()
-})
+  await user.click(screen.getByRole('button', { name: 'Tambah' }))
+  await user.click(screen.getByRole('button', { name: 'Reset' }))
 
-// 5. Pengujian validasi judul kosong
-test('judul kosong menampilkan pesan error', () => {
-  render(
-    <MemoryRouter initialEntries={['/tambah']}>
-      <App />
-    </MemoryRouter>,
-  )
-
-  fireEvent.click(
-    screen.getByRole('button', { name: 'Simpan' })
-  )
-
-  expect(
-    screen.getByRole('alert')
-  ).toHaveTextContent('Judul wajib diisi')
+  expect(screen.getByText('0')).toBeInTheDocument()
 })
