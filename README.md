@@ -1,5 +1,4 @@
 # Ujian Tengah Semester IF25-22014 Pengembangan Aplikasi Web
-## README milikmu
 # Direktori Kuliner Sekitar Kampus ITERA
 
 Aplikasi berbasis web untuk membantu mahasiswa dan masyarakat menemukan informasi tempat makan, minuman, dan jajanan di sekitar Kampus Institut Teknologi Sumatera (ITERA).
