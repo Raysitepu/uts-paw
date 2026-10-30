@@ -1,0 +1,116 @@
+
+.halaman-detail {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+/* Link kembali ke daftar */
+.halaman-detail > a {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #166534;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Kartu informasi kuliner */
+.detail-kuliner {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Judul */
+.detail-kuliner header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 24px;
+}
+
+.detail-kuliner h1 {
+  color: #174d35;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.detail-kuliner header p {
+  color: #64748b;
+  margin: 0;
+}
+
+/* Informasi */
+.informasi-detail h2 {
+  font-size: 21px;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.informasi-detail dl {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 18px 24px;
+}
+
+.informasi-detail dt {
+  font-weight: 600;
+  color: #475569;
+}
+
+.informasi-detail dd {
+  margin: 0;
+  color: #1e293b;
+}
+
+/* Tombol */
+.aksi-detail {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 24px;
+  margin-top: 30px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.aksi-detail a,
+.aksi-detail button {
+  padding: 11px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.aksi-detail a {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.aksi-detail .tombol-hapus {
+  background: #dc2626;
+  color: white;
+  border: none;
+}
+
+.aksi-detail .tombol-hapus:hover {
+  background: #b91c1c;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .detail-kuliner {
+    padding: 20px;
+  }
+
+  .informasi-detail dl {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .informasi-detail dd {
+    margin-bottom: 12px;
+  }
+}

@@ -112,17 +112,14 @@
     width: 100%;
   }
   
-/* Mengubah warna kursor pengetikan judul */
 #judul {
   caret-color: #166534;
 }
 
-/* Menampilkan kursor pointer pada dropdown kategori */
 #kategori {
   cursor: pointer;
 }
 
-/* Merapikan tampilan angka harga rata-rata */
 #hargaRataRata {
   font-variant-numeric: tabular-nums;
 }

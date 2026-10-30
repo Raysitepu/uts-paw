@@ -1,5 +1,6 @@
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import useKoleksi from '../hooks/useKoleksi.js'
+import './Detail.css'
 
 export default function Detail() {
   const { id } = useParams()
