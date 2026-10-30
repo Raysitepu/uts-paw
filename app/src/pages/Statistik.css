@@ -1,0 +1,135 @@
+
+.halaman-statistik {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.statistik-pembuka {
+  margin-bottom: 28px;
+}
+
+.statistik-pembuka h1 {
+  color: #174d35;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.statistik-pembuka p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.ringkasan-statistik {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.kartu-ringkasan {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.kartu-ringkasan h2 {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.kartu-ringkasan p {
+  font-size: 36px;
+  font-weight: 700;
+  color: #166534;
+  margin: 0;
+}
+
+.bagian-tabel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.bagian-tabel h2 {
+  color: #174d35;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.bagian-tabel > p {
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tabel-gulir {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabel-data {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabel-data th,
+.tabel-data td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.tabel-data thead th {
+  background: #e8f5e9;
+  color: #166534;
+  font-weight: 700;
+}
+
+.tabel-data tbody tr:nth-child(even) {
+  background: #f8faf8;
+}
+
+.tabel-data tbody tr:hover {
+  background: #f0fdf4;
+}
+
+.tabel-data td:last-child,
+.tabel-data th:last-child {
+  text-align: right;
+}
+
+.tabel-data tfoot th,
+.tabel-data tfoot td {
+  border-top: 2px solid #166534;
+  background: #f0fdf4;
+  font-weight: 700;
+  color: #166534;
+}
+
+.statistik-kosong {
+  text-align: center;
+  color: #64748b;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .halaman-statistik {
+    padding: 16px 10px;
+  }
+
+  .ringkasan-statistik {
+    grid-template-columns: 1fr;
+  }
+
+  .tabel-data th,
+  .tabel-data td {
+    padding: 10px 12px;
+  }
+}
