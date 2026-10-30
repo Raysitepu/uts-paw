@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useKoleksi from '../hooks/useKoleksi.js'
@@ -35,31 +36,13 @@ export default function Tambah() {
       return
     }
 
-    if (!form.alamat.trim()) {
-      setGalat('Alamat tempat kuliner wajib diisi.')
-      return
-    }
-
-    if (
-      form.hargaRataRata === '' ||
-      Number(form.hargaRataRata) < 0
-    ) {
-      setGalat('Harga rata-rata harus diisi dengan angka yang valid.')
-      return
-    }
-
-    if (!form.jamBuka.trim()) {
-      setGalat('Jam buka tempat kuliner wajib diisi.')
-      return
-    }
-
     setGalat('')
 
     tambah({
       ...form,
       judul: form.judul.trim(),
       alamat: form.alamat.trim(),
-      hargaRataRata: Number(form.hargaRataRata),
+      hargaRataRata: Number(form.hargaRataRata || 0),
       jamBuka: form.jamBuka.trim(),
     })
 
